@@ -1,206 +1,333 @@
-# Bella Vista — Italian Fine Dining Website
-## Complete Setup Guide
+# Bella Vista — Italian Fine Dining Restaurant Website
+
+A full-stack restaurant website for Bella Vista Ristorante Italiano, featuring an online reservation system, dynamic menu management, image gallery, customer testimonials, and a comprehensive admin panel — all powered by a Supabase backend.
 
 ---
 
-## STEP 1 — Images Daalo (Pehle)
+## Features
 
-Ye images `public/images/` folder mein rakho.
-Leonardo AI se download karo, naam bilkul wahi rakho jo neeche likhe hain.
+### Public Website
 
-### Dish Images (Menu + Signature Section)
-| File Name        | Kya Banana Hai |
-|-----------------|----------------|
-| dish_a1.jpg     | Bruschetta al Pomodoro — close up, crusty bread, tomatoes, basil |
-| dish_a2.jpg     | Burrata e Prosciutto — creamy burrata, Parma ham |
-| dish_a3.jpg     | Carpaccio di Manzo — thin beef slices, rocket, parmesan |
-| dish_a4.jpg     | Zuppa di Funghi — dark mushroom soup, truffle cream |
-| dish_a5.jpg     | Fritto di Mare — crispy mixed seafood platter |
-| dish_a6.jpg     | Insalata Caprese — buffalo mozzarella, tomatoes, basil |
-| dish_a7.jpg     | Focaccia della Casa — rosemary focaccia, olive oil |
-| dish_a8.jpg     | Gamberi all'Aglio — king prawns, garlic, herbs |
-| dish_p1.jpg     | Truffle Tagliatelle — pasta with black truffle shavings ⭐ SIGNATURE |
-| dish_p2.jpg     | Cacio e Pepe — spaghetti, pepper, pecorino |
-| dish_p3.jpg     | Lobster Spaghetti — spaghetti with whole lobster ⭐ SIGNATURE |
-| dish_p4.jpg     | Pappardelle al Cinghiale — wide pasta, wild boar ragù |
-| dish_p5.jpg     | Rigatoni all'Amatriciana — rigatoni, tomato, guanciale |
-| dish_p6.jpg     | Ravioli di Spinaci — spinach ricotta ravioli |
-| dish_p7.jpg     | Lasagna della Nonna — classic layered lasagna |
-| dish_p8.jpg     | Linguine alle Vongole — linguine with clams |
-| dish_pz1.jpg    | Margherita Verace — Neapolitan pizza, basil |
-| dish_pz2.jpg    | Tartufo Nero — white pizza, black truffle ⭐ SIGNATURE |
-| dish_pz3.jpg    | Diavola Piccante — spicy salami pizza |
-| dish_pz4.jpg    | Quattro Formaggi — four cheese pizza |
-| dish_pz5.jpg    | Prosciutto e Rucola — prosciutto, rocket pizza |
-| dish_pz6.jpg    | Salmone Affumicato — smoked salmon pizza |
-| dish_pz7.jpg    | Ortolana — vegetable pizza |
-| dish_pz8.jpg    | Calzone Classico — folded calzone |
-| dish_m1.jpg     | Osso Buco alla Milanese — braised veal shank, saffron risotto ⭐ SIGNATURE |
-| dish_m2.jpg     | Branzino al Forno — whole sea bass, caponata |
-| dish_m3.jpg     | Bistecca Fiorentina — T-bone steak, herbs |
-| dish_m4.jpg     | Agnello alla Scottadito — lamb cutlets, grilled |
-| dish_m5.jpg     | Risotto ai Funghi Porcini — porcini mushroom risotto |
-| dish_m6.jpg     | Pollo alla Cacciatora — chicken cacciatore |
-| dish_m7.jpg     | Tonno alla Siciliana — seared tuna |
-| dish_m8.jpg     | Melanzane alla Parmigiana — aubergine parmigiana |
-| dish_d1.jpg     | Tiramisù della Casa — classic tiramisu |
-| dish_d2.jpg     | Panna Cotta alla Vaniglia — vanilla panna cotta |
-| dish_d3.jpg     | Cannolo Siciliano — crispy cannolo |
-| dish_d4.jpg     | Affogato al Caffè — gelato + espresso |
-| dish_d5.jpg     | Torta al Cioccolato — chocolate fondant |
-| dish_d6.jpg     | Gelato Artigianale — 3 scoops gelato |
-| dish_d7.jpg     | Zeppole Fritte — Neapolitan doughnuts |
-| dish_d8.jpg     | Delizie al Limone — lemon cake |
-| dish_dr1.jpg    | Aperol Spritz — orange cocktail, bubbles |
-| dish_dr2.jpg    | Sparkling Water — elegant glass, San Pellegrino |
-| dish_dr3.jpg    | Negroni — classic red cocktail, orange peel |
-| dish_dr4.jpg    | Barolo DOCG — red wine glass, dark atmosphere |
-| dish_dr5.jpg    | Limoncello — frozen limoncello glass |
-| dish_dr6.jpg    | Espresso Martini — dark cocktail, coffee foam |
-| dish_dr7.jpg    | Italian Lemonade — yellow drink, mint, lemon |
-| dish_dr8.jpg    | Prosecco — champagne flute, bubbles |
+**Home Page**
+- Animated hero section with particle effects and parallax scrolling
+- Chef's Signature Dishes section with dish detail modals
+- Image gallery showcase with hover overlays
+- Customer testimonials carousel with auto-rotation
+- Contact section with CSS-based map and opening hours
 
-### Gallery Images
-| File Name      | Kya Banana Hai |
-|---------------|----------------|
-| gallery_1.jpg | Elegant Italian restaurant interior, dark, candlelight, mahogany |
-| gallery_2.jpg | Open kitchen, chefs in white, flames, professional action shot |
-| gallery_3.jpg | Wine cellar bar, hundreds of wine bottles, warm lighting |
-| gallery_4.jpg | Outdoor terrace, fairy lights, jasmine, romantic dinner setting |
-| gallery_5.jpg | Private dining room, crystal chandelier, intimate setting |
-| gallery_6.jpg | Chef's hands rolling fresh pasta on marble surface |
-| gallery_7.jpg | Dessert display — tiramisu, panna cotta on dark slate |
-| gallery_8.jpg | Sophisticated bar lounge, Negroni cocktail, leather stools |
-| gallery_9.jpg | Chef's table tasting menu, amuse-bouche, white gloves |
+**Menu Page**
+- Tabbed navigation by category (Antipasti, Pasta, Pizza, Mains, Desserts, Drinks)
+- Clickable dietary filters (Vegan, Gluten-Free, Spicy)
+- Per-item popup modal with dish image, description, and price
+- Dynamic categories loaded from the admin panel
 
-### Chef Portrait
-| File Name       | Kya Banana Hai |
-|----------------|----------------|
-| chef_marco.jpg | Professional chef portrait, white jacket, dark background |
+**Reservations Page**
+- Two-step reservation form with validation
+- Real-time date picker with past dates disabled
+- Time slots showing Passed and Booked status
+- Add to Google Calendar integration
+- PDF reservation confirmation download
+- My Reservations section with Cancel and Reschedule functionality
+- 24-hour cancellation policy enforcement
 
---- 
+**Gallery Page**
+- Masonry grid layout with restaurant imagery
+- Hover overlay with image descriptions
 
-## STEP 2 — Supabase Setup
+**Contact Page**
+- Contact form connected to the admin panel
+- CSS-based map with configurable location
+- Opening hours and contact details
 
-### A. Account + Project Banao
-1. https://supabase.com jao → Free account banao
-2. "New Project" → naam: `bella-vista` → password rakh lo (yaad rakhna)
-3. Region: Singapore (Pakistan k qareeb)
-4. Wait karo ~2 min
+**Other Pages**
+- Our Story page with chef biography and timeline
+- Privacy Policy
+- Terms of Use
 
-### B. Database Schema Run Karo
-1. Left sidebar → **SQL Editor** → **New Query**
-2. `supabase/schema.sql` file open karo
-3. Saara content copy karo → SQL Editor mein paste karo → **Run**
-4. "Success" message aana chahiye
+### Admin Panel
 
-### C. Admin User Banao
-1. Left sidebar → **Authentication** → **Users** → **Add User**
-2. Email: `admin@bellavista.pk` (ya jo bhi chahte ho)
-3. Password: ek strong password rakho
-4. "Create User" dabao
+Accessible at `/admin/login`
 
-### D. API Keys Copy Karo
-1. Left sidebar → **Settings** → **API**
-2. **Project URL** copy karo
-3. **anon public** key copy karo
+| Section | Capabilities |
+|---|---|
+| Dashboard | Live statistics, recent reservations, pending count |
+| Reservations | View all bookings, filter by status, update status, view contact details |
+| Menu | Add, edit, delete menu items with dietary tags and availability toggle |
+| Categories | Add, reorder, show or hide menu categories |
+| Gallery | Manage gallery images with show or hide control |
+| Testimonials | Add, edit, delete customer reviews |
+| Messages | View contact form submissions, mark as read, reply via email |
+| Settings | Update all restaurant information — changes propagate site-wide instantly |
 
-### E. .env File Banao
-Project folder mein `.env` naam ki file banao:
+### Settings Propagation
+
+Any change saved in Admin Settings updates the entire website in real time, including the restaurant name, phone number, email, opening hours, social media links, address, and map location.
+
+---
+
+## Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 18, TypeScript |
+| Styling | Tailwind CSS, custom CSS |
+| Build Tool | Vite |
+| Routing | React Router v6 |
+| Backend | Supabase (PostgreSQL, Auth, Row Level Security) |
+| Deployment | Vercel (recommended) or Netlify |
+
+---
+
+## Prerequisites
+
+Before you begin, ensure the following are installed on your system.
+
+- Node.js version 18 or higher — https://nodejs.org
+- npm (included with Node.js)
+- Git — https://git-scm.com
+
+To verify installation, open a terminal and run:
+
 ```
-VITE_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGc...apna-key-yahan
+node --version
+npm --version
+git --version
 ```
 
 ---
 
-## STEP 3 — Project Chalao
+## Local Development Setup
 
-```bash
-# Dependencies install karo (sirf pehli baar)
+### Step 1 — Clone or Download the Project
+
+If you have the project as a ZIP file, extract it to a folder of your choice.
+
+If cloning from GitHub:
+
+```
+git clone https://github.com/YOUR_USERNAME/bella-vista.git
+cd bella-vista
+```
+
+### Step 2 — Install Dependencies
+
+```
 npm install
+```
 
-# Development server start karo
+### Step 3 — Configure Supabase
+
+The application requires a Supabase project for full functionality. Without Supabase, the site still runs using local fallback data, but reservations, contact messages, and admin panel features will not persist.
+
+**Create a Supabase project**
+
+1. Go to https://supabase.com and create a free account
+2. Click "New Project" and name it `bella-vista`
+3. Wait approximately two minutes for the project to initialise
+
+**Set up the database**
+
+1. In your Supabase project, go to SQL Editor
+2. Click "New Query"
+3. Open the file `supabase/schema.sql` from this project
+4. Copy the entire contents and paste into the SQL Editor
+5. Click "Run" — all tables, policies, and seed data will be created
+6. If you previously ran an older version of this schema, also run `supabase/schema_missing_tables.sql` to add the `categories` and `contact_messages` tables
+
+**Create an admin user**
+
+1. Go to Authentication > Users
+2. Click "Add User"
+3. Enter your admin email and a strong password
+4. Click "Create User"
+
+**Get your API credentials**
+
+1. Go to Settings > API
+2. Copy the "Project URL"
+3. Copy the "anon public" key
+
+### Step 4 — Configure Environment Variables
+
+Create a file named `.env` in the project root directory:
+
+```
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-public-key-here
+```
+
+Replace the values with your actual Supabase credentials. A template is provided in `.env.example`.
+
+### Step 5 — Add Images
+
+Place all restaurant images in the `public/images/` directory. The full list of required image filenames and suggested AI image generation prompts are documented in `README_IMAGES.md`.
+
+### Step 6 — Start the Development Server
+
+```
 npm run dev
-
-# Browser mein kholo:
-# Website:     http://localhost:5173
-# Admin Panel: http://localhost:5173/admin/login
 ```
 
-### Admin Panel Login
-- URL: `http://localhost:5173/admin/login`
-- Email: wahi jo Supabase mein banaya
-- Password: wahi jo Supabase mein rakha
+The website will be available at:
+- Public website: http://localhost:5173
+- Admin panel: http://localhost:5173/admin/login
 
 ---
 
-## Admin Panel Features
+## Building for Production
 
-| Section      | Kya Kar Sakte Ho |
-|-------------|-----------------|
-| Dashboard   | Stats dekho, recent reservations |
-| Reservations | Sab bookings dekho, status change karo (confirmed/completed/cancelled), detail modal |
-| Menu        | Items add/edit/delete, availability toggle, signature mark |
-| Gallery     | Images add/edit/delete, show/hide toggle |
-| Testimonials| Reviews add/edit/delete, show/hide |
-| Settings    | Restaurant name, phone, hours, email update karo |
+To create an optimised production build:
+
+```
+npm run build
+```
+
+The output will be generated in the `dist/` directory, ready to deploy to any static hosting provider.
+
+To preview the production build locally:
+
+```
+npm run preview
+```
 
 ---
 
-## Image Prompts for Leonardo AI
+## Deployment
 
-### Dish Images (use for all dish_*.jpg files)
-**Aspect Ratio: 4:3 (1200×900px)**
+### Option A — Vercel (Recommended)
 
-Template prompt (naam replace karo):
+Vercel provides zero-configuration deployment for React applications and handles client-side routing automatically.
+
+1. Push your project to a GitHub repository (see GitHub Setup below)
+2. Go to https://vercel.com and sign in with GitHub
+3. Click "New Project" and import your repository
+4. In the "Environment Variables" section, add:
+   - `VITE_SUPABASE_URL` — your Supabase project URL
+   - `VITE_SUPABASE_ANON_KEY` — your Supabase anon key
+5. Click "Deploy"
+
+Your site will be live at a Vercel subdomain within approximately one minute. Every push to the main branch triggers an automatic redeployment.
+
+### Option B — Netlify
+
+1. Push your project to GitHub
+2. Go to https://netlify.com and connect your GitHub account
+3. Select your repository and configure:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Add the same environment variables as listed above
+5. Create a file at `public/_redirects` with the following content, so client-side routing works correctly:
+
 ```
-Professional food photography of [DISH NAME], Italian fine dining restaurant,
-dark moody background, candlelight ambiance, elegant plate presentation,
-steam rising, shallow depth of field, warm golden tones, ultra realistic,
-8K, shot on marble surface
-```
-
-### Gallery Images
-**Aspect Ratio: 3:2 (1800×1200px) — except gallery_3, gallery_5, gallery_6 use 2:3 portrait**
-
-```
-gallery_1: Elegant Italian restaurant interior, dark mahogany furniture,
-white tablecloths, gold candelabras, Venetian ceiling murals, candlelight,
-luxury fine dining atmosphere, wide angle, photorealistic, 8K
-
-gallery_2: Professional open kitchen Italian restaurant, chefs in white
-uniforms, gas flames, stainless steel, warm amber lighting, editorial photography
-
-gallery_3 (portrait): Luxury wine cellar bar, hundreds of wine bottles on
-wooden shelves, Edison bulbs, crystal glasses, romantic atmosphere
-
-gallery_4: Outdoor restaurant terrace evening, fairy lights overhead, jasmine
-vines, white tablecloths, candles, romantic garden atmosphere, golden hour
-
-gallery_5 (portrait): Exclusive private dining room, 8-person table, crystal
-chandelier, floor-length tablecloths, gold tableware, candlelight, luxury
-
-gallery_6 (portrait): Chef's hands rolling fresh pasta on floured marble,
-close up, Italian kitchen, warm editorial light, depth of field
-
-gallery_7: Elegant Italian dessert display — tiramisu, panna cotta, cannoli
-on dark marble slate, fine dining photography, warm tones
-
-gallery_8: Sophisticated Italian bar lounge, Aperol Spritz and Negroni,
-leather stools, moody lighting, golden accents, editorial photography
-
-gallery_9: Intimate chef's table luxury restaurant, 8-course tasting menu,
-white glove service, dramatic directional lighting, cinematic
+/*    /index.html   200
 ```
 
-### Chef Portrait
-**Aspect Ratio: 2:3 portrait (1200×1800px)**
+6. Click "Deploy Site"
+
+---
+
+## GitHub Setup — Pushing from Your PC (Windows)
+
+Follow these steps to push the project to GitHub from a Windows machine.
+
+### Step 1 — Install Git
+
+Download Git for Windows from https://git-scm.com/download/win and install with default settings.
+
+### Step 2 — Configure Git Identity
+
+Open a terminal (Command Prompt, PowerShell, or the VS Code terminal) and run:
+
 ```
-Professional portrait photography of a confident Italian male chef,
-early 40s, white chef's jacket, warm studio lighting, dark bokeh background,
-arms crossed, natural expression, photorealistic, 8K
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
 ```
+
+### Step 3 — Create a GitHub Account
+
+Go to https://github.com and create a free account if you do not already have one.
+
+### Step 4 — Create a New Repository
+
+1. On GitHub, click the "+" icon in the top right corner
+2. Select "New repository"
+3. Set the repository name to `bella-vista`
+4. Set the description (see Repository Information below)
+5. Choose "Public" or "Private"
+6. Do not initialise with a README, .gitignore, or license — the project already includes these
+7. Click "Create repository"
+
+### Step 5 — Verify .gitignore
+
+Before pushing, confirm that your `.env` file will never be uploaded to GitHub. Open the `.gitignore` file in the project root and verify it contains:
+
+```
+.env
+node_modules
+dist
+```
+
+### Step 6 — Initialise and Push
+
+Open a terminal in your project folder and run the following commands in order:
+
+```
+git init
+git add .
+git commit -m "Initial commit: Bella Vista restaurant website"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/bella-vista.git
+git push -u origin main
+```
+
+Replace `YOUR_USERNAME` with your actual GitHub username.
+
+### Step 7 — Authenticate with GitHub
+
+When prompted for credentials during the push, use your GitHub username and a Personal Access Token in place of your password.
+
+To create a token: GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic) > Generate new token > select the "repo" scope > Generate token. Copy the token immediately, as it will not be shown again.
+
+### Step 8 — Future Updates
+
+After making changes to the project, push updates with:
+
+```
+git add .
+git commit -m "Description of changes"
+git push
+```
+
+---
+
+## Repository Information
+
+**Recommended repository name**
+
+```
+bella-vista
+```
+
+**Recommended description**
+
+```
+A full-stack Italian fine dining restaurant website built with React, TypeScript, Tailwind CSS, and Supabase. Features an online reservation system, dynamic menu management, image gallery, customer testimonials, and a complete admin panel with real-time settings propagation.
+```
+
+**Recommended topics** (add under repository Settings > Topics)
+
+```
+react typescript tailwind supabase restaurant vite admin-panel reservation-system postgresql
+```
+
+---
+
+## Environment Variables Reference
+
+| Variable | Description | Required |
+|---|---|---|
+| `VITE_SUPABASE_URL` | Supabase project URL, found in Settings > API | Yes |
+| `VITE_SUPABASE_ANON_KEY` | Supabase anon public key, found in Settings > API | Yes |
 
 ---
 
@@ -209,55 +336,81 @@ arms crossed, natural expression, photorealistic, 8K
 ```
 bella-vista/
 ├── public/
-│   └── images/          ← APNI SAARI IMAGES YAHAN RAKHO
+│   └── images/                   Restaurant and dish images
 ├── src/
-│   ├── lib/
-│   │   └── supabase.ts  ← Supabase client
+│   ├── assets/
+│   │   └── svgs/Icons.tsx        Custom SVG icon components
+│   ├── components/
+│   │   ├── admin/                Admin layout and route protection
+│   │   ├── layout/                Navbar and Footer
+│   │   └── sections/              Page section components
 │   ├── contexts/
-│   │   └── AuthContext.tsx ← Admin authentication
+│   │   ├── AuthContext.tsx       Admin authentication state
+│   │   └── SettingsContext.tsx   Global restaurant settings
+│   ├── data/
+│   │   ├── menuData.ts           Local fallback menu data
+│   │   └── restaurantData.ts     Local fallback restaurant data
 │   ├── hooks/
-│   │   ├── useSupabaseData.ts ← All data fetching
-│   │   └── useScrollReveal.ts
+│   │   ├── useSupabaseData.ts    All data fetching and mutations
+│   │   └── useScrollReveal.ts    Scroll animation hook
+│   ├── lib/
+│   │   └── supabase.ts           Supabase client initialisation
 │   ├── pages/
-│   │   ├── admin/       ← Admin panel pages
-│   │   │   ├── AdminLogin.tsx
-│   │   │   ├── AdminDashboard.tsx
-│   │   │   ├── AdminReservations.tsx
-│   │   │   ├── AdminMenu.tsx
-│   │   │   ├── AdminGallery.tsx
-│   │   │   ├── AdminTestimonials.tsx
-│   │   │   └── AdminSettings.tsx
-│   │   └── [public pages]
-│   └── components/
-│       ├── admin/
-│       │   ├── AdminLayout.tsx
-│       │   └── ProtectedRoute.tsx
-│       └── [sections & layout]
-└── supabase/
-    └── schema.sql       ← Database setup SQL
+│   │   ├── admin/                Admin panel pages
+│   │   └── [public pages]        Public-facing pages
+│   ├── App.tsx                   Route configuration
+│   ├── main.tsx                  Application entry point
+│   └── index.css                 Global styles and animations
+├── supabase/
+│   ├── schema.sql                Complete database schema with seed data
+│   └── schema_missing_tables.sql SQL for tables added in later updates
+├── .env.example                  Environment variable template
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ---
 
-## Agar Supabase Setup Na Karo
+## Database Schema
 
-Website bina Supabase k bhi kaam karti hai:
-- Menu, gallery, testimonials local data se load honge
-- Reservations localStorage mein save hongi
-- Admin panel ka data section nahi chalega
+The Supabase database contains the following tables:
+
+| Table | Purpose |
+|---|---|
+| `reservations` | Customer booking records with status tracking |
+| `menu_items` | Restaurant menu with categories and dietary information |
+| `gallery_items` | Gallery images with labels and sort order |
+| `testimonials` | Customer reviews and ratings |
+| `categories` | Dynamic menu category configuration |
+| `settings` | Key-value store for restaurant configuration |
+| `contact_messages` | Customer enquiries submitted from the contact form |
+
+All tables have Row Level Security enabled. Public visitors can read menu items, gallery, testimonials, categories, and settings. Only authenticated admin users have write access and can read reservations and contact messages.
 
 ---
 
-## Production Mein Deploy Karna (Vercel)
+## Admin Panel Access
 
-```bash
-# Build banao
-npm run build
+The admin panel is accessible at the `/admin/login` path on any deployment.
 
-# Vercel par deploy (free):
-# 1. vercel.com par account banao
-# 2. "Import Project" → bella-vista folder
-# 3. Environment Variables mein VITE_SUPABASE_URL aur VITE_SUPABASE_ANON_KEY add karo
-# 4. Deploy!
-```
+Admin credentials are created during Supabase setup (Authentication > Users). To change the admin password later, go to your Supabase Dashboard > Authentication > Users, select the user, and edit the password.
 
+---
+
+## Known Considerations
+
+- The Supabase `schema.sql` file must be executed before first use. Without it, the admin panel will show empty data or table-not-found errors, and the public site will fall back to static local data.
+- The `schema_missing_tables.sql` file must also be run if upgrading from an earlier version of this project that did not include the `categories` or `contact_messages` tables.
+- Images must be manually placed in `public/images/`, as the application does not include a file upload feature. Image filenames follow a strict naming convention documented in `README_IMAGES.md`.
+
+---
+
+## License
+
+This project is provided for personal and commercial use by the repository owner. The source code is not licensed for redistribution or resale.
+
+---
+
+Bella Vista Ristorante Italiano — Built with React, TypeScript, and Supabase
